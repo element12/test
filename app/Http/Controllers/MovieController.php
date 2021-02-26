@@ -14,7 +14,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        //
+        return movie::get();
     }
 
     /**
@@ -25,7 +25,8 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $movie = new movie;
+        $movie->create($request->all());
     }
 
     /**
@@ -36,7 +37,7 @@ class MovieController extends Controller
      */
     public function show(movie $movie)
     {
-        //
+        return $movie;
     }
 
     /**
@@ -48,7 +49,7 @@ class MovieController extends Controller
      */
     public function update(Request $request, movie $movie)
     {
-        //
+        $movie->update($request->all());
     }
 
     /**
@@ -59,6 +60,8 @@ class MovieController extends Controller
      */
     public function destroy(movie $movie)
     {
-        //
+        $movie->delete;
     }
+
+
 }
