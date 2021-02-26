@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('/new',function () {
+Route::get('/practicas/new',function () {
     return view('new_movie');
 });
 
